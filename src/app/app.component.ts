@@ -8,7 +8,7 @@ import { RandomizerService, ILoadout } from '../services/randomizer/randomizer.s
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  isKiller = true;
+  isKiller = false;
   loadout: ILoadout;
 
   constructor(private randomizer: RandomizerService) {
