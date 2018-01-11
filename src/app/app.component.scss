@@ -1,0 +1,66 @@
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.perk {
+  margin: 10px 10px 10px 10px;
+  width: 99px;
+}
+
+.item {
+  margin: 4px 4px 4px 4px;
+  width: 73px;
+
+  &.addon {
+    transform: scale(0.8);
+    width: 59px;
+  }
+}
+
+.container {
+  height: 99px;
+  margin-bottom: 7px;
+}
+
+.box {
+  background: gray;
+  border-width: 3px;
+  border-style: solid;
+  border-color: black;
+}
+
+.perk-box {
+  width: 64px;
+  height: 64px;
+  transform: translateX(15px) translateY(15px) rotate(45deg);
+
+  @extend .box;
+
+  img {
+    transform: rotate(-45deg);
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.item-box {
+  width: 64px;
+  height: 64px;
+  transform: translateX(1px) translateY(25px);
+
+  @extend .box;
+
+  img {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.text {
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  font-variant: small-caps;
+  font-weight: bolder;
+  font-size: smaller;
+}

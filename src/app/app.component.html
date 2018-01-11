@@ -1,0 +1,47 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="row">
+  <button (click)="roll()">REROLL</button>
+  <input [(ngModel)]="isKiller" type="checkbox" (change)="roll()" /> Is Killer
+</div>
+
+<div class="row" style="height: 160px;">
+  <ng-container *ngIf="loadout.item; let item">
+    <div class="item">
+      <div class="container">
+        <div class="item-box">
+          <img [src]="item.img">
+        </div>
+      </div>
+  
+      <div class="text">
+        {{ item.name }}
+      </div>
+    </div>
+
+    <div class="item addon" *ngFor="let addon of item.addons">
+      <div class="container">
+        <div class="item-box">
+          <img [src]="addon.img">
+        </div>
+      </div>
+  
+      <div class="text">
+        {{ addon.name }}
+      </div>
+    </div>    
+  </ng-container>
+</div>
+
+<div class="row">
+  <div *ngFor="let perk of loadout.perks" class="perk">
+    <div class="container">
+      <div class="perk-box">
+        <img [src]="perk.img">
+      </div>
+    </div>
+
+    <div class="text">
+      {{ perk.name }}
+    </div>
+  </div>
+</div>
